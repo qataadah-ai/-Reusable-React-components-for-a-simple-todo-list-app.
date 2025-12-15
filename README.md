@@ -1,16 +1,44 @@
-# React + Vite
+Todo App – React
+Project Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Todo List application built using React. It allows users to:
 
-Currently, two official plugins are available:
+Add new todos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mark todos as completed
 
-## React Compiler
+Delete todos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app demonstrates React component architecture, state management with useState, and props passing between components. It also includes CSS styling for a clean and interactive user interface.
 
-## Expanding the ESLint configuration
+Component Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+App.jsx
+
+The main component of the app.
+
+Holds the state for todos and the input value.
+
+Contains the logic to add, toggle, and delete todos.
+
+Passes data and functions as props to child components.
+
+TodoList.jsx
+
+Receives the array of todos and action functions as props.
+
+Loops through todos and renders a TodoItem for each.
+
+Displays a message if the todo list is empty.
+
+TodoItem.jsx
+
+Receives a single todo and action functions as props.
+
+Displays the todo text and a delete button.
+
+Clicking the todo text toggles its completion status.
+
+Clicking the delete button removes the todo.
+
+Uses CSS classes to visually indicate completed todos.
